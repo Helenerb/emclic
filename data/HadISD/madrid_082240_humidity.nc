@@ -1,0 +1,1 @@
+/div/no-backup/users/hebe/data/HadISD/madrid_082240_humidity.nc

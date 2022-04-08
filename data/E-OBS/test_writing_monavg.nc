@@ -1,0 +1,1 @@
+/div/no-backup/users/hebe/data/E-OBS/test_writing_monavg.nc
