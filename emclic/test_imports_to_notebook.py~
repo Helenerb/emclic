@@ -1,0 +1,13 @@
+# We will here test if imports work
+
+import matplotlib.pyplot as plt
+
+print("successfully import matplotlib")
+
+import emclic.test_emclic_import as emc
+
+emc.hello_emclic()
+
+import emclic.scripts.test_scripts_import as scpt
+
+scpt.hello_scripts()
