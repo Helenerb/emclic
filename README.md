@@ -24,5 +24,17 @@ ssh -L 8080:localhost:<PORT> <REMOTE_USER>@<REMOTE_HOST>
 - Enter password to server
 - Paste the link previously copied into local browser
 
+Other useful commands for handling notebook servers: 
+
+Checking if any notebook servers are already runnning
+```
+$ jupyter notebook list
+```
+Killing (shutting down) notebook servers that are no longer needed
+```
+$ jupyter notebook stop <PORT>
+```
+
+
 
 
