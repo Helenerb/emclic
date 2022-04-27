@@ -36,7 +36,7 @@ $ jupyter notebook stop <PORT>
 ```
 
 ## Contents
-Most useful code is located in the notebooks, in the `emclic` package. The `scripts` package mostly contains the raw files that the notebooks are based on. 
+Most useful code is located in the notebooks, in the `emclic` package.  
 The notebooks are:
 - *climatologies_eobs_era5.ipynb*: calculates climatologies from already regridded E-OBS and ERA-5 data.
 - *gridwise_difference_eobs_ers5.ipynb*: performs regridding of E-OBS and ERA5 data so that they are comparable for Warsaw and Madrid
@@ -46,9 +46,14 @@ The notebooks are:
 - *time_series_eobs_era5.ipynb*: simple extraction and plotting of time series data for Warsaw and Madrid, E-OBS and ERA-5 data
 - *time_series_hadISD.ipynb*: simple data formatting (using `xarray`, not `cdo`) and plotting of HadIDS weather station data for Warsaw and Madrid. 
 
-The `data` package mainly contains formatted and raw data, but also some scripts for downloading of the raw data:
-- *E-OBS/download_eobs.py*: Simple script for accessing the Copernicus data store API
+The `scripts` package mostly contains the raw files that the notebooks are based on, as well as the file `local_paths.py` which contain some helper files for local paths. 
+
+The `data` package mainly contains formatted and raw data, but also some scripts for downloading, as well as some slight formatting, of the raw data:
+- *E-OBS/download_eobs.py*: Simple script for accessing the Copernicus data store API and download data from it
 - *HadCRUT5/download_hadCRUT5.py*: Simple script for downloading HadCRUT5 data from an url and writing the content to a file
 - *HadISD/download_hadISD.py*: Script for downloading data on station data measurements of meteorological data (temperature, dewpoint, windspeed, wind direction, station and sea level pressure), as well as calculated quantities (vapor pressure, saturation vapor pressure, relative humidity, specific humidity, apparent temperature), for weather stations in Warsaw and Madrid
-- 
+- *HadISD*: Example file containing simple date range selection of one HadISD station data netcdf file. 
+- *netatmo/download_Netatmo.py*: Example script of downloading netatmo station data from Madrid. Note that this script assumes that a netatmo access token has already been obtained. Note that the call in this example only provides the last available measurement point, not the full time series. 
+- *netatmo/download_Netatmo_timeseries*: contains the example script for downloading time series data for one specific netatmo station. Note that this requires knowledge on the desired netatmo device and module id. 
+-  *netatmo/get_access_token_Netatmo.py*: this script contains so far unsuccessful attempts at fetching the access token from netatmo. I include it here for reference or a starting point only, and recommend following my netatmo-download instruction on how to get the access token using postman. 
 
