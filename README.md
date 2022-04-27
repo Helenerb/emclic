@@ -35,6 +35,8 @@ Killing (shutting down) notebook servers that are no longer needed
 $ jupyter notebook stop <PORT>
 ```
 
+## Contents
+Most useful code is located in the notebooks, in the `emclic` package. The `scripts` package contains files 
 
 
 
