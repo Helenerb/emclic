@@ -36,7 +36,15 @@ $ jupyter notebook stop <PORT>
 ```
 
 ## Contents
-Most useful code is located in the notebooks, in the `emclic` package. The `scripts` package contains files 
+Most useful code is located in the notebooks, in the `emclic` package. The `scripts` package mostly contains the raw files that the notebooks are based on. 
+The notebooks are:
+- *climatologies_eobs_era5.ipynb*: calculates climatologies from already regridded E-OBS and ERA-5 data.
+- *gridwise_difference_eobs_ers5.ipynb*: performs regridding of E-OBS and ERA5 data so that they are comparable for Warsaw and Madrid
+- *plot_climatologies_eobs_era5.ipynb*: produces plots of climatologies, only does minor data formatting to ready the data for plotting
+- *plot_comparison_eobs_era5.ipynb*: plots comparisons of the E-OBS and ERA-5 data, based on the regridded data sets
+- *statistics_daily_tmax_era5_eobs.ipynb*: calculates R-squared and RMSE statistics for two data sets (regridded E-OBS and ERA-5 for Warsaw and Madrid)
+- *time_series_eobs_era5.ipynb*: simple extraction and plotting of time series data for Warsaw and Madrid, E-OBS and ERA-5 data
+- *time_series_hadISD.ipynb*: simple data formatting (using `xarray`, not `cdo`) and plotting of HadIDS weather station data for Warsaw and Madrid. 
 
 
 
