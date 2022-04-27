@@ -5,7 +5,7 @@ import os
 from requests.structures import CaseInsensitiveDict
 import json
 
-# Get access token from txt file:
+# Get access token from txt file, assumes that this is already stored in the file netatmo_access_token.txt
 with open("netatmo_access_token.txt", "r") as f:
     access_token = f.readlines()
 
@@ -17,13 +17,15 @@ headers["Authorization"] = "Bearer {}".format(access_token)
 
 print("headers: \n", headers, "\n")
 
+# example urls for different calls to the netatmo API
+
 #url = "https://api.netatmo.com/api/getpublicdata?lat_ne=40.6&lon_ne=-3.4&lat_sw=40.1&lon_sw=-4&required_data=temperature&filter=true"
 url = "https://api.netatmo.com/api/getpublicdata"
 
 # create a dictionary containing the parameters of the request
 params = CaseInsensitiveDict()
 
-#Enter coordinates:
+#Enter coordinates:  example coordinates for Madrid
 params['lat_ne'] = 40.6
 params['lon_ne'] = -3.4
 params['lat_sw'] = 40.1

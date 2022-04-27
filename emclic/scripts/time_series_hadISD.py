@@ -1,4 +1,5 @@
 # Loads data for Warsaw and Madrid from different sources, plots time series for max temperature and humidity
+# this is actually not at all netatmo data! It is hadISD data!!
 
 
 import cdo as cdo  # cdo for python library
