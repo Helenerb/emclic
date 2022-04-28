@@ -26,8 +26,8 @@ headers_url["content-type"] = "application/x-www-form-urlencoded"
 headers_url["Authorization"] = "bearer"
 headers_json["content-type"] = "application/json"  # not checked
 
-# note, the code as of now will not run, since the password field is not filled in
-data = {'grant_type' : 'password', 'client_id' : '6221fa3fa7afb20de310c20c', 'client_secret' :'yXf8j8sJMdVZ0TiU7yQH7N6iRuoQyoNgP', 'username' : "hebe@cicero.oslo.no", 'password' : '<INSERT PASSWORD>'}
+# note, the code as of now will not run, since the username and  password fields are not filled in
+data = {'grant_type' : 'password', 'client_id' : '6221fa3fa7afb20de310c20c', 'client_secret' :'yXf8j8sJMdVZ0TiU7yQH7N6iRuoQyoNgP', 'username' : "<INSERT USERNAME>", 'password' : '<INSERT PASSWORD>'}
 print("\n data: \n", data, "\n")
 data_json =  json.dumps(data)
 print("Json.dumps(data): \n", data_json, "\n")
